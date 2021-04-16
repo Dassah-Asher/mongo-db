@@ -9,7 +9,7 @@ router.route("/")
 
 //get SingleStudent and delete single student
 router.route("/:_id")
-.get(protect, getSingleTrainee)
+.get( getSingleTrainee)
 .put(protect,updateTrainee)
 .delete(protect,deleteTrainee)
 
