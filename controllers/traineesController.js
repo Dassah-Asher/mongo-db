@@ -28,10 +28,10 @@ const getSingleTrainee = async (req, res) => {
 const updateTrainee = async (req, res) => {
   const foundTrainee = await Trainee.findById(req.params._id);
   if (foundTrainee) {
-    (foundTrainee.name = req.body.name),
-      (foundTrainee.destination = req.body.destination),
-      (foundTrainee.email = req.body.email),
-      (foundTrainee.dob = req.body.dob);
+    foundTrainee.name = req.body.name,
+    foundTrainee.destination = req.body.destination,
+     foundTrainee.email = req.body.email,
+    foundTrainee.dob = req.body.dob
 
     const updatedTrainee = await foundTrainee.save();
     res.json({ updatedTrainee });

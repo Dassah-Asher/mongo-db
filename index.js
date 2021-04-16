@@ -3,6 +3,7 @@ const dotenv=require("dotenv");
 const morgan=require("morgan");
 const connectDB=require("./config/connectDB");
 const traineesRoute=require("./routes/traineesRoute");
+const usersRoute=require("./routes/usersRoute")
 
 
 dotenv.config();
@@ -19,6 +20,7 @@ app.use(express.json())
 
 //routes
 app.use("/api/v1/trainees",traineesRoute);
+app.use("/api/v1/users",usersRoute)
 
 //home route
 app.get("/", (req,res)=>{
