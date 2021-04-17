@@ -4,14 +4,14 @@ const protect=require("../middlewares/authMiddleware")
 const router=express.Router()
 
 router.route("/")
-.post(protect,createTrainee)
-.get(protect,getAllTrainees)
+.post(createTrainee)
+.get(getAllTrainees)
 
 //get SingleStudent and delete single student
 router.route("/:_id")
 .get( getSingleTrainee)
-.put(protect,updateTrainee)
-.delete(protect,deleteTrainee)
+.put(updateTrainee)
+.delete(protect, deleteTrainee)
 
 
 

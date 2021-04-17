@@ -41,7 +41,7 @@ const userLogin=async(req,res)=>{
 
    res.header("authorization",token_id).send(token_id);
 
-   /*res.json({user})*/
+   res.json({user})
      
    };
 

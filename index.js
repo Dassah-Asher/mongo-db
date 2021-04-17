@@ -27,6 +27,6 @@ app.get("/", (req,res)=>{
     res.send("<h1>welcome to our traineese API<h1>")
 });
 
-const port=process.env.PORT||5000
+const port=process.env.PORT||4000
 
 app.listen(port, ()=>console.log(`server started on port ${port}`))
